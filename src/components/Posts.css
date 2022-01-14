@@ -1,0 +1,25 @@
+.feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 56px;
+}
+
+.post {
+    width: 750px;
+    margin: 10px 0px;
+    padding: 8px;
+    border: 1px solid #bacdd8;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+}
+
+.user-info {
+    font-size: 12px;
+    margin: 0px 0px 8px 0px;
+}
+
+.post-title {
+    font-size: 2em;
+    margin: 0px;
+}

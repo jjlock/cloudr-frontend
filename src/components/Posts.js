@@ -7,8 +7,10 @@ function Posts() {
   useEffect(() => {
     const getPosts = async () => {
       const resp = await fetch('https://cloudr-api.jjlock.workers.dev/api/posts');
-      const postResp = await resp.json();
-      setPosts(postResp);
+      const postList = await resp.json();
+      // sort posts in reverse chronological order with the most recent posts first
+      postList.sort((p1, p2) => new Date(p2.created_at) - new Date(p1.created_at))
+      setPosts(postList);
     }
 
     getPosts();
